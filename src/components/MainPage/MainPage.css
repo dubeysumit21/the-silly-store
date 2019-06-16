@@ -1,0 +1,161 @@
+.App {
+    text-align: center;
+  }
+  body, html{
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+  .wrapper{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 4fr 1fr;
+    z-index: 3;
+  }
+  .image{
+    height: 100%; 
+    width: 100%; 
+    opacity: 0.9;
+  }
+  .header{
+    padding-top: 30px;
+    grid-column: span 12;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .toolbar_logo{
+    margin-left: 0.5rem;
+  }
+  .toolbar_logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+  }
+  .spacer{
+    flex: 1;
+  }
+  .toolbar_navigation{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .toolbar_navigation_items ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .toolbar_navigation_items li{
+    padding: 0 1rem;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .toolbar_navigation_items a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .toolbar_navigation_items a:hover{
+    color: #FE948F;
+  }
+  .signin{
+    grid-column: span 6;
+  }
+  .signup{
+    grid-column: span 6;
+  }
+  .signupbox{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+  }
+  .signupform{
+    width: 50%;
+    display: block;
+    margin: 40px auto;
+    border: 2px solid #FE948F;
+    border-radius: 5px;
+  }
+  .forminput{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 70%;
+    height: 40px;
+    border: 1px solid black;
+  }
+  .red{
+    border: 1px solid red;
+    background-color: salmon;
+  }
+  .forminput:focus{
+    background-color: #cccccc;  
+  }
+  .formbutton{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    border: 0px;
+  }
+  .formbutton:hover{
+    cursor: pointer;
+    background-color: #FE948F;
+  }
+  .formtext{
+    color: white;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes example{
+    0%{
+      color:white;
+    }
+    25%{
+      color: #FE948F;
+    }
+    50%{
+      color: #FD5C55;
+    }
+    100%{
+      color: white  ;
+    }
+  }
+  .footer{
+    grid-column: span 12;
+  }
+  .logo{
+    position: absolute;
+    left: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  @media(max-width: 768px){
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+    }
+    .signupform{
+      width: 85%;
+    }
+    .toolbar_logo{
+      margin-left: 1.5rem;
+    }
+  }
+  
+  .footercontents{
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
